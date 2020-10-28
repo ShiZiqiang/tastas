@@ -34,19 +34,19 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#samples">Samples</a>
             </li>
-            <!--<li class="nav-item">-->
-              <!--<a class="nav-link js-scroll-trigger" href="#Comparison">Comparison</a>-->
-            <!--</li>-->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#References">References</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li> -->
           </ul>
         </div>
       </div>
     </nav>
+
+<header class="bg-dark text-white">
+      <div class="container text-center">
+        <h1>基于TasTas的五说话人语音分离</h1>
+      </div>
+    </header>
 
     <br>  </br>
 
@@ -55,7 +55,6 @@
       <div class="container">
         <div class="row">
           <div class="col-md-15 mx-auto">
-            <!--<h2>Course Details</h2>-->
             <p class="lead" align="justify">
             本DEMO主要介绍TasTas，一种五说话人语音分离的最新技术。
                 </p><p class="lead" align="justify">
@@ -76,25 +75,14 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-8">
-
                     <h3>TasTas网络结构</h3>
                     <img src="src/iterative_la_furca_tastas.png" alt="Italian Trulli" width="750px">
                     <br>  </br> 
-                    <!-- <br>  </br>
-                    <br>  </br> -->
-                    <!-- <h3>Loss Terms</h3>
-                    <img src="src/vgg_loss.png" alt="Italian Trulli" width="450px"> -->
                 </div>
               </div>
-
               <br>  </br>
               <br>  </br>
-
-              <!-- <div class="row"> -->
-
-
               </div>
-
             </div>
 
         </div>
@@ -140,16 +128,11 @@
 
 
             <p class="lead" align="justify">
-                <!--Here are some samples from our model for you to listen. "Mixture input" refers to the original mixed audio.-->
-                <!--Conv-TasNet<sup>[1]</sup> refers to the method "Conv-TasNet: Surpassing Ideal Time–Frequency-->
-                <!--Magnitude Masking for Speech Separation", DPRNN<sup>[2]</sup>-->
-                <!--refer to the method "Dual-path RNN: efficient long sequence modeling for time-domain single-channel speech separation". "Ours" refer to our method. "Ground Truth" refer to the original samples.<br><br>-->
-                Here are some samples from our model for you to listen:
+               您可以试听下TasTas分离的一些声音样本:
                 <ul class="lead" align="justify" >
-                  <li>混合语音 - original mixed audio</li>
+                  <li>混合语音</li>
                   <li>原始真实分离语音</li>
                   <li>TasTas分离的语音</li>
-                Magnitude Masking for Speech Separation" </li>
                 </ul>
             </p>
             <style type="text/css">
@@ -165,19 +148,19 @@
 
 	      
 	       <center>
-            <h3>WSJ-2mix Dataset Samples</h3>
+            <h3>WSJ-2mix数据库中的声音</h3>
             <p></p>
             <p></p>
             <table>
               <thead>
                 <tr>
-                  <th>Mixture input</th>
-                  <th>Ground Truth</th>
-                  <th>Ours</th>
+                  <th>两人的混合语音</th>
+                  <th>原始真实分离语音</th>
+                  <th>TasTas分离的语音</th>
                 </tr>
               </thead>
               <tbody>
-                <tr style="border-top:1px solid black">
+					 <tr style="border-top:1px solid black">
                   <td rowspan="2"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
                       <source src="src/samples/dprnn2/22go0106_0.742_440o030p_-0.742.wav"
                         type="audio/wav"></audio></td>
