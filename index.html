@@ -35,11 +35,11 @@
             <p class="lead" align="justify">
             本DEMO主要介绍TasTas，一种五说话人语音分离的最新技术。
                 </p><p class="lead" align="justify">
-               TasTas旨在解决多说话人单声道语音分离（也称为鸡尾酒会问题）的问题。 TasTas引入了两个简单但有效的改进，一个是迭代的多阶段细化分离方案，
+               TasTas旨在解决多说话人单声道语音分离（也称为鸡尾酒会问题）的问题。 TasTas引入了两个简单但有效的方法，一个是迭代的多阶段细化分离方案，
 		  另一个是通过分离后的语音和原始语音之间的说话人身份一致性来纠正不完美分离的语音，从而提高了语音分离的性能。我们在基准数据库WSJ0-2mix上的实验
-		  结果显示SDRi为20.55dB，SI-SDRi为20.35dB，PESQ为3.69，ESTOI达到94.86％，这表明我们的TasTas技术的性能在该基准数据库上处于世界第一。
-		  该研究发表于InterSpeech2020（注：语音领域的最权威会议）。同时我们也改善TasTas的训练方法，让其可以完成5个说话人的语音分离问题，目前在该问题上，我们
-		  的技术也处于世界第一梯队。
+		  结果显示SDRi为20.55dB，SI-SDRi为20.35dB，PESQ为3.69，ESTOI达到94.86％，这表明目前我们TasTas技术的性能在该基准数据库上处于世界第一。
+		  该研究发表于InterSpeech2020（注：语音领域的最权威会议）。同时我们也改善TasTas的训练方法，让其可以完成5个说话人的语音分离问题。目前在5说话人语音分离问题上，
+		  特别是在WSJ0-5mix上，我们的TasTas性能处于世界第一梯队。
               </p><p class="lead" align="justify">
               </p><p class="lead" align="justify">
               </p><p class="lead" align="justify">
@@ -53,7 +53,7 @@
               <div class="row">
                 <div class="col-md-8">
                     <h3>TasTas网络结构</h3>
-                    <img src="src/iterative_la_furca_tastas.png" alt="Italian Trulli" width="750px">
+                    <img src="src/iterative_la_furca_tastas.jpg" alt="Italian Trulli" width="750px">
                     <br>  </br> 
                 </div>
               </div>
@@ -72,7 +72,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <h3>WSJ0-2mix上的实验结果（2说话人语音分离）</h3>
-                      <img src="src/sdri_2mix.png" alt="Italian Trulli" width="400px">
+                      <img src="src/sdri_2mix.jpg" alt="Italian Trulli" width="400px">
                     </div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <h3>WSJ0-5mix上的实验结果（5说话人语音分离）</h3>
-                      <img src="src/sdri_5mix.png" alt="Italian Trulli" width="400px">
+                      <img src="src/sdri_5mix.jpg" alt="Italian Trulli" width="400px">
                     </div>
                   </div>
                 </div>
@@ -106,11 +106,6 @@
 
             <p class="lead" align="justify">
                您可以试听下TasTas分离的一些声音样本:
-                <ul class="lead" align="justify" >
-                  <li>混合语音</li>
-                  <li>原始真实分离语音</li>
-                  <li>TasTas分离的语音</li>
-                </ul>
             </p>
             <style type="text/css">
                 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -125,7 +120,7 @@
 
 	      
 	       <center>
-            <h3>WSJ-2mix数据库中的声音</h3>
+            <h3>WSJ0-2mix数据库中的语音（2说话人语音分离）</h3>
             <p></p>
             <p></p>
             <table>
@@ -142,18 +137,37 @@
                       <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s1/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
+                      <source src="src/samples/2mix/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s2/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                      <source src="src/samples/2mix/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				<tr style="border-top:1px solid black">
+                  <td rowspan="2"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/2mix/mix/442c020x_1.8089_050c010j_-1.8089.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/2mix/s1/442c020x_1.8089_050c010j_-1.8089.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/2mix/ours_s1/442c020x_1.8089_050c010j_-1.8089_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/2mix/s2/442c020x_1.8089_050c010j_-1.8089.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/2mix/ours_s2/442c020x_1.8089_050c010j_-1.8089_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
 				<tr style="border-top:1px solid black">
@@ -161,18 +175,18 @@
                       <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s1/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
+                      <source src="src/samples/2mix/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s2/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                      <source src="src/samples/2mix/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
 				<tr style="border-top:1px solid black">
@@ -180,18 +194,18 @@
                       <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s1/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
+                      <source src="src/samples/2mix/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s2/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                      <source src="src/samples/2mix/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
 				<tr style="border-top:1px solid black">
@@ -199,18 +213,18 @@
                       <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s1/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
+                      <source src="src/samples/2mix/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s2/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                      <source src="src/samples/2mix/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
 				<tr style="border-top:1px solid black">
@@ -218,18 +232,18 @@
                       <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s1/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
+                      <source src="src/samples/2mix/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s2/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                      <source src="src/samples/2mix/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
 				<tr style="border-top:1px solid black">
@@ -237,18 +251,18 @@
                       <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s1/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
+                      <source src="src/samples/2mix/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s2/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                      <source src="src/samples/2mix/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
 				<tr style="border-top:1px solid black">
@@ -256,18 +270,18 @@
                       <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s1/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
+                      <source src="src/samples/2mix/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s2/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                      <source src="src/samples/2mix/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
 				<tr style="border-top:1px solid black">
@@ -275,37 +289,18 @@
                       <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s1/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
+                      <source src="src/samples/2mix/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
+                      <source src="src/samples/2mix/s2/441c020m_2.4506_447o030z_-2.4506.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
-                        type="audio/wav"></audio></td>
-                </tr>
-				<tr style="border-top:1px solid black">
-                  <td rowspan="2"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/2mix/mix/441c020m_2.4506_447o030z_-2.4506.wav"
-                        type="audio/wav"></audio></td>
-                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s1/441c020m_2.4506_447o030z_-2.4506.wav"
-                        type="audio/wav"></audio></td>
-                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s1/441c020m_2.4506_447o030z_-2.4506_s1.wav"
-                        type="audio/wav"></audio></td>
-                </tr>
-                <tr>
-                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/s2/441c020m_2.4506_447o030z_-2.4506.wav"
-                        type="audio/wav"></audio></td>
-                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
+                      <source src="src/samples/2mix/ours_s2/441c020m_2.4506_447o030z_-2.4506_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
               </tbody>
@@ -320,104 +315,464 @@
              
 
 
-            <h3>WSJ-5mix Dataset Samples</h3>
+            <h3>WSJ0-5mix数据库中的语音（5说话人语音分离）</h3>
             <p></p>
             <p></p>
             <table>
               <thead>
                 <tr>
-                  <th>Mixture input</th>
-                  <th>Ground Truth</th>
-                  <th>Ours</th>
+                      <th>两人的混合语音</th>
+                  <th>原始真实分离语音</th>
+                  <th>TasTas分离的语音</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style="border-top:1px solid black">
                   <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/dprnn5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0.wav"
+                      <source src="src/samples/5mix/mix/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s4.wav"
+                      <source src="src/samples/5mix/s1/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s2.wav"
+                      <source src="src/samples/5mix/our_s1/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s3.wav"
+                      <source src="src/samples/5mix/s2/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s4.wav"
+                      <source src="src/samples/5mix/our_s2/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s1.wav"
+                      <source src="src/samples/5mix/s3/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s5.wav"
+                      <source src="src/samples/5mix/our_s3/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0_s3.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s2.wav"
+                      <source src="src/samples/5mix/s4/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s3.wav"
+                      <source src="src/samples/5mix/our_s4/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0_s4.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s5.wav"
+                      <source src="src/samples/5mix/s5/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/22gc010q_1.9223_052c010w_0.54576_445o0311_-0.54576_050o020d_-1.9223_447c0210_0_s1.wav"
+                      <source src="src/samples/5mix/our_s5/445c0215_0.87935_050a050f_0.17951_422a010j_-0.17951_053a0512_-0.87935_22ga0114_0_s5.wav"
                         type="audio/wav"></audio></td>
                 </tr>
-                <tr style="border-top:1px solid black">
+				
+                
+				<tr style="border-top:1px solid black">
                   <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/dprnn5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0.wav"
+                      <source src="src/samples/5mix/mix/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s4.wav"
+                      <source src="src/samples/5mix/s1/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s1.wav"
+                      <source src="src/samples/5mix/our_s1/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0_s1.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s2.wav"
+                      <source src="src/samples/5mix/s2/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s3.wav"
+                      <source src="src/samples/5mix/our_s2/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0_s2.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s5.wav"
+                      <source src="src/samples/5mix/s3/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s4.wav"
+                      <source src="src/samples/5mix/our_s3/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0_s3.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s3.wav"
+                      <source src="src/samples/5mix/s4/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s5.wav"
+                      <source src="src/samples/5mix/our_s4/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0_s4.wav"
                         type="audio/wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/gt5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s1.wav"
+                      <source src="src/samples/5mix/s5/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0.wav"
                         type="audio/wav"></audio></td>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/ours5/443o030v_2.2076_441c020w_1.508_22hc010q_-1.508_053o020z_-2.2076_440o030x_0_s2.wav"
+                      <source src="src/samples/5mix/our_s5/445o030k_0.73338_22go010b_1.6272_051a050r_-1.6272_050c010f_-0.73338_443o030l_0_s5.wav"
                         type="audio/wav"></audio></td>
                 </tr>
+				
+				<tr style="border-top:1px solid black">
+                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/mix/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s1/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s1/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s2/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s2/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s3/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s3/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0_s3.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s4/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s4/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0_s4.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s5/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s5/445o030k_1.7242_22ga010s_1.9241_052o0210_-1.9241_053a050p_-1.7242_050a050k_0_s5.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				
+				
+				
+				<tr style="border-top:1px solid black">
+                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/mix/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s1/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s1/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s2/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s2/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s3/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s3/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0_s3.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s4/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s4/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0_s4.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s5/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s5/445o030n_0.27254_22hc0114_2.3868_051o020x_-2.3868_443o030i_-0.27254_053a0512_0_s5.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				
+				<tr style="border-top:1px solid black">
+                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/mix/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s1/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s1/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s2/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s2/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s3/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s3/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0_s3.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s4/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s4/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0_s4.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s5/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s5/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0_s5.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				
+				
+				<tr style="border-top:1px solid black">
+                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/mix/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s1/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s1/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s2/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s2/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s3/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s3/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0_s3.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s4/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s4/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0_s4.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s5/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s5/446o0304_0.97123_445c020y_1.2026_050c010g_-1.2026_051o020a_-0.97123_22ho0101_0_s5.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				
+				<tr style="border-top:1px solid black">
+                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/mix/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s1/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s1/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s2/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s2/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s3/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s3/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0_s3.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s4/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s4/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0_s4.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s5/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s5/446o0308_0.49042_050a050i_0.01497_440o030f_-0.01497_051o020o_-0.49042_441c020q_0_s5.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				
+				<tr style="border-top:1px solid black">
+                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/mix/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s1/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s1/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s2/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s2/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s3/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s3/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0_s3.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s4/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s4/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0_s4.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s5/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s5/446o0309_1.9743_053o0209_1.4982_444c020i_-1.4982_423c0207_-1.9743_051o0203_0_s5.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				
+				
+				<tr style="border-top:1px solid black">
+                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/mix/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s1/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s1/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s2/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s2/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s3/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s3/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0_s3.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s4/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s4/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0_s4.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s5/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s5/446o030a_1.6968_053c010c_0.41479_442o030y_-0.41479_446c020j_-1.6968_441c020m_0_s5.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				
+				<tr style="border-top:1px solid black">
+                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/mix/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s1/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s1/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0_s1.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s2/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s2/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0_s2.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s3/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s3/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0_s3.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s4/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s4/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0_s4.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/s5/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0.wav"
+                        type="audio/wav"></audio></td>
+                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                      <source src="src/samples/5mix/our_s5/447o030c_0.93688_053c0103_0.81663_440c020u_-0.81663_444c020r_-0.93688_052c0112_0_s5.wav"
+                        type="audio/wav"></audio></td>
+                </tr>
+				
+				
               </tbody>
             </table>
 
@@ -436,14 +791,6 @@
       </div>
     </section>
 	</center>
-    <!-- <section id="code" class="bg-light">
-    	<center><h3>Code</h3></center>
-    	<div class="container">
-	    	<div class="row">
-	    		<p class="lead" align="justify"> Code will be available under the following repo: </p>
-	    	</div>
-	    </div>
-    </section> -->
 
     <section id="Reference" class="bg-white">
       <center><h3>References</h3></center>
@@ -453,7 +800,7 @@
           <div class="col-lg-13 mx-auto">
               <p class="lead" align="justify">
                     <p class="lead" align="justify">
-                        [1]. Ziqiang Shi, Rujie Liu, Jiqing Han. Speech Separation Based on Multi-Stage Elaborated Dual-Path Deep BiLSTM with Auxiliary 
+              [1]. Ziqiang Shi, Rujie Liu, Jiqing Han. Speech Separation Based on Multi-Stage Elaborated Dual-Path Deep BiLSTM with Auxiliary 
 			    Identity Loss. Interspeech 2020. https://arxiv.org/abs/2008.03149
 			</p>
                     <p class="lead" align="justify">
